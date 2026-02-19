@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deyem Project | AI-Driven Creative Studio</title>
+    <meta name="description" content="Premium digital experiences. Viral content. Measurable results.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Floating Orbs -->
+    <div class="orbs-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">D</div>
+                <span>Deyem</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#process" class="nav-link">Process</a>
+            </div>
+            
+            <a href="#contact" class="nav-cta">Get Started</a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#contact" class="mobile-cta">Get Started</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="floating-cards">
+            <div class="float-card float-card-1">
+                <div class="float-icon"><i data-lucide="zap"></i></div>
+                <div class="float-content">
+                    <p class="float-label">Performance</p>
+                    <p class="float-value">99.9%</p>
+                </div>
+            </div>
+            <div class="float-card float-card-2">
+                <div class="float-icon blue"><i data-lucide="users"></i></div>
+                <div class="float-content">
+                    <p class="float-label">Growth</p>
+                    <p class="float-value">+340%</p>
+                </div>
+            </div>
+            <div class="float-card float-card-3">
+                <div class="float-icon green"><i data-lucide="trending-up"></i></div>
+                <div class="float-content">
+                    <p class="float-label">ROI</p>
+                    <p class="float-value">12.5x</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>Now accepting projects for 2025</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="title-line">We Create</span>
+                <span class="title-line gradient">Viral Content</span>
+                <span class="title-line">That Converts</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Deyem Project combines AI automation with creative excellence to build brands, 
+                drive engagement, and deliver measurable results.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#work" class="btn-primary">
+                    View Our Work
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#services" class="btn-secondary">Explore Services</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">Satisfaction %</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">Years Exp.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-tag">
+                        <i data-lucide="sparkles"></i>
+                        <span>About Us</span>
+                    </div>
+                    
+                    <h2 class="section-title">
+                        We Create Digital
+                        <span class="gradient">Experiences</span>
+                        That Matter
+                    </h2>
+                    
+                    <p class="about-text">
+                        Founded in 2013, Deyem Project has been at the forefront of digital innovation. 
+                        We believe that great design combined with cutting-edge technology can transform 
+                        businesses and create meaningful connections.
+                    </p>
+                    
+                    <p class="about-text">
+                        Our team of strategists, designers, and developers work collaboratively to deliver 
+                        solutions that not only look stunning but drive real business results.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon"><i data-lucide="target"></i></div>
+                            <div>
+                                <h4>Goal-Oriented</h4>
+                                <p>Every project aligned with your objectives</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon blue"><i data-lucide="lightbulb"></i></div>
+                            <div>
+                                <h4>Innovation First</h4>
+                                <p>Cutting-edge solutions for modern challenges</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <div class="visual-logo">D</div>
+                        <p class="visual-year">Est. 2013</p>
+                    </div>
+                    <div class="awards-card">
+                        <div class="award-icon"><i data-lucide="award"></i></div>
+                        <div>
+                            <p class="award-number">50+</p>
+                            <p class="award-label">Industry Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag blue">
+                    <i data-lucide="layers"></i>
+                    <span>Our Services</span>
+                </div>
+                <h2 class="section-title">
+                    Full-Spectrum Digital
+                    <span class="gradient blue">Solutions</span>
+                </h2>
+                <p class="section-subtitle">
+                    From concept to launch, we provide end-to-end services that help businesses thrive.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon purple"><i data-lucide="palette"></i></div>
+                    <h3>Brand Identity</h3>
+                    <p>Comprehensive brand strategy, visual identity design, and guidelines.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon blue"><i data-lucide="code-2"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Custom web applications built with modern technologies and optimized performance.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon green"><i data-lucide="smartphone"></i></div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon pink"><i data-lucide="trending-up"></i></div>
+                    <h3>Digital Marketing</h3>
+                    <p>Data-driven marketing strategies that increase visibility and drive conversions.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon cyan"><i data-lucide="box"></i></div>
+                    <h3>3D & Motion</h3>
+                    <p>Stunning 3D visualizations, animations, and interactive experiences.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon orange"><i data-lucide="cpu"></i></div>
+                    <h3>AI Solutions</h3>
+                    <p>Intelligent automation and AI-powered features for modern applications.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="section">
+        <div class="container">
+            <div class="section-header-row">
+                <div>
+                    <div class="section-tag cyan">
+                        <i data-lucide="briefcase"></i>
+                        <span>Selected Work</span>
+                    </div>
+                    <h2 class="section-title">
+                        Featured <span class="gradient cyan">Projects</span>
+                    </h2>
+                </div>
+                <a href="#" class="view-all">
+                    View All <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-bg" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));">
+                        <i data-lucide="shopping-bag" class="project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">E-commerce</span>
+                        <h3>Luxe Commerce</h3>
+                    </div>
+                    <div class="project-overlay">
+                        <p>Premium e-commerce with AI-powered recommendations.</p>
+                        <a href="#" class="project-btn">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-bg" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2));">
+                        <i data-lucide="activity" class="project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Health Tech</span>
+                        <h3>HealthTrack</h3>
+                    </div>
+                    <div class="project-overlay">
+                        <p>Health monitoring platform with real-time analytics.</p>
+                        <a href="#" class="project-btn">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-bg" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.2));">
+                        <i data-lucide="building-2" class="project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Real Estate</span>
+                        <h3>EstatePro</h3>
+                    </div>
+                    <div class="project-overlay">
+                        <p>Property management platform with virtual tours.</p>
+                        <a href="#" class="project-btn">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-bg" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(59, 130, 246, 0.2));">
+                        <i data-lucide="leaf" class="project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Sustainability</span>
+                        <h3>EcoTrack</h3>
+                    </div>
+                    <div class="project-overlay">
+                        <p>Carbon footprint tracking for enterprises.</p>
+                        <a href="#" class="project-btn">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section section-alt">
+        <div class="container">
+            <div class="section-header center">
+                <div class="section-tag pink">
+                    <i data-lucide="git-branch"></i>
+                    <span>How We Work</span>
+                </div>
+                <h2 class="section-title">Our Process</h2>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Discovery</h3>
+                    <p>Deep dive into your brand, audience, and goals.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Strategy</h3>
+                    <p>Custom roadmap with AI + creative direction.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Creation</h3>
+                    <p>High-quality content at scale with AI workflows.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Optimize</h3>
+                    <p>Continuous analysis to maximize ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-header center">
+                <div class="section-tag orange">
+                    <i data-lucide="message-circle"></i>
+                    <span>Testimonials</span>
+                </div>
+                <h2 class="section-title">What Clients Say</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Deyem Project transformed our social presence completely. Engagement up 340% and real business results.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">E</div>
+                        <div>
+                            <h4>Esteban</h4>
+                            <p>Owner, La Tana</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">AI-powered workflow is incredible. 10x more content without sacrificing quality. A game-changer.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">L</div>
+                        <div>
+                            <h4>Luigi</h4>
+                            <p>Owner, El Barrio</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Professional, creative, and data-driven. Deyem understands modern marketing better than anyone.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div>
+                            <h4>Marco</h4>
+                            <p>Owner, First American Bar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                Ready to Scale<br>
+                <span class="gradient">Your Brand?</span>
+            </h2>
+            <p class="cta-subtitle">Let's create something extraordinary together.</p>
+            <a href="mailto:info@deyemproject.com" class="btn-primary large">
+                Start Your Project
+                <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-icon">D</div>
+                    <span>Deyem Project</span>
+                    <p>AI-driven creative studio building brands that convert.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Content Creation</a></li>
+                        <li><a href="#">Social Strategy</a></li>
+                        <li><a href="#">Brand Identity</a></li>
+                        <li><a href="#">AI Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Process</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="mailto:info@deyemproject.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Deyem Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
