@@ -23,10 +23,10 @@ class Particle {
     reset() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = (Math.random() - 0.5) * 0.5;
-        this.speedY = (Math.random() - 0.5) * 0.5;
-        this.opacity = Math.random() * 0.5 + 0.1;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.3;
+        this.opacity = Math.random() * 0.4 + 0.1;
     }
     
     update() {
@@ -46,9 +46,35 @@ class Particle {
     }
 }
 
+// Draw connections between nearby particles
+function drawConnections() {
+    const maxDistance = 120;
+    const maxConnections = 3;
+    
+    for (let i = 0; i < particles.length; i++) {
+        let connections = 0;
+        for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < maxDistance && connections < maxConnections) {
+                const opacity = (1 - distance / maxDistance) * 0.15;
+                ctx.beginPath();
+                ctx.strokeStyle = `rgba(122, 158, 170, ${opacity})`;
+                ctx.lineWidth = 0.5;
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+                connections++;
+            }
+        }
+    }
+}
+
 function initParticles() {
     particles = [];
-    const particleCount = Math.min(window.innerWidth / 10, 100);
+    const particleCount = Math.min(window.innerWidth / 6, 180);
     for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
     }
@@ -60,6 +86,7 @@ function animateParticles() {
         particle.update();
         particle.draw();
     });
+    drawConnections();
     requestAnimationFrame(animateParticles);
 }
 
